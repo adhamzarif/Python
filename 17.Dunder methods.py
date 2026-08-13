@@ -1,0 +1,17 @@
+from typing import Self
+
+class Car:
+    def __init__(self, brand: str, horsepower: int) -> None:
+        self.brand = brand
+        self.horsepower = horsepower
+
+    # Dunder Method
+    def __str__(self) -> str:
+        return f"{self.brand}, {self.horsepower}"
+    def __add__(self, other: self) -> str:
+        return f"{self.brand} & {other.brand}"
+
+    
+volvo: Car = Car('Volvo', 200)
+bmw: Car = Car('BMW', 240)
+print(volvo + bmw)
