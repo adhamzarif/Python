@@ -8,7 +8,8 @@ class Car:
     # Dunder Method
     def __str__(self) -> str:
         return f"{self.brand}, {self.horsepower}"
-    def __add__(self, other: self) -> str:
+
+    def __add__(self, other: Self) -> str:
         return f"{self.brand} & {other.brand}"
 
     
